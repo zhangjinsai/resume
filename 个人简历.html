@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>个人简介</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/grjl.css">
+
+
+
+    <!--computed rem-->
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + "px";
+    </script>
+
+</head>
+
+<body>
+<div id="jy-m">
+    <audio src="audio/kk.mp3" loop preload="auto" ><!--不提前进行预加载-->></audio>
+    <!-- loop：重复播放--> <!--preload="auto"：不提前进行预加载-->
+</div>
+<!--珠峰。confing（{
+。。。
+music：‘jy-m’}）例如id=jy-m
+
+3给css中的jy-m加类名 move 例如#jy-m。move）并增加2转动的动画效果，动画名叫musicMove
+-webkit-animation：musicMove 1s。。。。-->
+<!--魔方区域-->
+<section class="one" id="jy-one">
+    <ul class="box">
+        <li><img src="img/7.jpg" alt=""/></li>
+        <li><img src="img/8.jpg" alt=""/></li>
+        <li><img src="img/9.jpg" alt=""/></li>
+        <li><img src="img/12.jpg" alt=""/></li>
+        <li><img src="img/13.jpg" alt=""/></li>
+        <li><img src="img/14.jpg" alt=""/></li>
+    </ul>
+
+    <div class="div"><img src="img/zf_cubeTip.png" alt=""/></div>
+</section>
+
+<!--六个页面滑动区域-->
+<section class="swiper" id="jy-swipe">
+    <!--返回-->
+    <div class="return"><img src="img/zf_return.png" alt=""/></div>
+    <!--滑动处理-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide page1">
+                <dl id="jy-page1" data-page="1">
+                    <dt>我的信息</dt>
+                    <dd>
+                        <em>01</em>
+                        <a href="#">学校：兰州职业技术学院</a>
+                    </dd>
+                    <dd>
+                        <em>02</em>
+                        <a href="#">文化水平：大专</a>
+                    </dd>
+                    <dd>
+                        <em>03</em>
+                        <a href="#">兴趣爱好：音乐 乒乓球</a>
+                    </dd>
+                    <dd>
+                        <em>04</em>
+                        <a href="#">姓名：张金赛</a>
+                    </dd>
+                    <dd>
+                        <em>05</em>
+                        <a href="#">性别：女</a>
+                    </dd>
+                    <dd>
+                        <em>06</em>
+                        <a href="#">座右铭：没有做不到的，只有想不到的—_—</a>
+                    </dd>
+                    <dd>
+                        <em>07</em>
+                        <a href="#">求职：软件工程师</a>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="swiper-slide page2">
+                <div class="two">
+                    <h3>专业技能</h3>
+                    <P>Excel/Word/PowerPoint</P>
+                   <!-- <P> Microsoft Word 2010 </P>
+                    <P>Microsoft PowerPoint 2010</P>-->
+                    <P>HTML、html5+css3、JavaScript</P>
+                    <p>熟练使用bootstrap、less 等框架技术</p>
+                    <p>熟悉gulp+webpack打包工具</p>
+                    <p>运用 WebStorm、PhotoShop 等开发工具</p>
+                    <p>了解angular.JS(MVVM)、react 基础及 MongoDB、express</p>
+                    <p class="p">不为失败找原因</p>
+                    <p class="p">只为成功找方法</p>
+                </div>
+
+
+            </div>
+            <div class="swiper-slide page3">
+                <p>QQ:2012642606<br/>
+                    昵称:【 @吣袽  栤崶ヤ~zZ 】</p>
+                <p>微信:18793514637<br/>
+                    昵称:麋鹿</p>
+                <h3>联系方式:15010504773</h3>
+                <div class="job">
+                    <img src="img/d.jpg" alt="">
+                </div>
+
+            </div>
+
+            <div class="swiper-slide page4">
+                <!--每个图片有两个效果 一个是旋转的效果 另--个事动画效果 ，这是我们得把每个图片放在div里，div这个盒子负责动画效果，图片负责旋转效果，-->
+                <div>
+                    <img src="img/psb%20(2).jpg" alt=""/>
+                </div>
+                <div>
+                    <img src="img/psb%20(3).jpg" alt=""/>
+                </div>
+                <div>
+                    <img src="img/psb%20(4).jpg" alt=""/>
+                </div>
+                <div class="tip"><!--两张图片算成一个整体放在div里面-->
+                    <img src="img/zf_styleTip1.png" alt="">
+                    <img src="img/zf_styleTip2.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide page5">
+                <h3>谢谢观看</h3>
+                <img src="img/1421378884b81e84de8f2a82ee.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!--import need js-->
+<!--引用zhufengpeixun。min。js给魔方区域加一个id（在html中） jy-cube《section class=“cube” id 》-->
+
+<script src="js/zhufengpeixun.min.js"></script>
+<script>
+    zhufengpeixun.config({
+        cube: "jy-one",
+        swipe: "jy-swipe",
+        mak:"jy-page1",
+        music:"jy-m"
+    });
+    /*做完3d折叠的配置后还是出现一点问题；折叠的过程中有些东西看不见
+     *    当前页面不要加背景颜色，因为加入的背景颜色会遮盖住我们折叠的区域
+     *   因为在折叠的过程中文字和程序被遮住了 所以看不见我们需要提高文字和序号的层级顺序，
+     *   让他们在最上层即可--》文字A 序号 EM/*/
+
+</script>
+</body>
+</html>
